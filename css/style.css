@@ -28,8 +28,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+
+
 body {
-	line-height: 1;
+	font-size: 16px;
+  	font-family: 'Verdana';
 }
 ol, ul {
 	list-style: none;
@@ -55,7 +59,7 @@ table {
 .border{
 	display:flex;
 	justify-content: flex-end;
-   background:#F0F0F0;
+   	background:#F0F0F0;
   }
   .border a{
 	display:flex;
@@ -115,26 +119,213 @@ table {
   .menu li a:hover{
 	  border-bottom: 3px solid;
   }
-.footer{
-    background:  gray;
-    color: #fff;
-    text-align: center;
-    padding-left: 10px;
-    padding-bottom: 10px;
+
+  /* 廣告橫幅 */
+
+.banner{
+	position: relative;
+  	margin-bottom: 50px;
+  	max-width: 100%;
+  	height: 346px;
+  	background: url(../images/banner.png) right center;
+  	background-size: cover;
 }
+.banner h2 {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 100%;
+	height: 50%;
+	background-color: rgba(0, 0, 0, 0.3);
+	font-size: 35px;
+	color: #fff;
+	line-height: 1.4;
+	/*padding: 0 0 0 25px;*/
+  }
+  .banner h2 span{
+	  padding: 25px;
+  }
+
+/* 內容 */
 .content{
 	margin-bottom: 20px;
 }
 .course{
 	display:flex;
 	justify-content: space-around;
+	align-items: flex-start;
+	list-style: none;
+	margin-bottom: 50px;
 
 }
 .course-item{
-	border: 1px solid #000;
-	width: 300px;
+	width: 30%;
+  	min-height: 320px;
+ 	box-shadow: 0 1px 2px #aaa;
 }
 .course-item h2{
 	text-align: center;
 	font-size: 25px;
 }
+.course .course-item .text{
+	margin: 0 15px;
+	text-align: justify;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 1.5;
+	padding-bottom: 15px;
+}
+.course .course-item .text h2{
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
+}
+.course .course-item .text ul{
+	list-style: inside;
+}
+
+/* 比較表 */
+.comparison h2{
+	font-size: 24px;
+	margin-bottom: 30px;
+  	font-weight: 700;
+  	text-align: center;
+}
+.comparison table{
+	width: 85%;
+	margin: 0 auto 60px;
+}
+.comparison td,th{
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 12px 12px 12px 24px;
+	text-align: left;
+}
+.comparison th {
+	background: #eee;
+	font-weight: 500;
+  }
+.comparison td{
+	font-weight: 400;
+}
+.comparison .better{
+	color: #00AEAE;
+}
+.comparison tr:hover{
+	background: #eee;
+}
+
+/* 聯絡資料 */
+.contact{
+	padding: 40px 30px 20px;
+	background: linear-gradient(180deg, #00654a,#009972);
+	color: #fff;
+	margin-bottom: 20px;
+}
+.contact h2{
+	font-size: 24PX;
+	font-weight: 600;
+	line-height: 1.6;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.contact form{
+	display: flex;
+	justify-content: stretch;
+	align-items: center;
+}
+.contact form textarea{
+	margin-right: 20px;
+	width: 50%;
+	outline: none;
+	border-radius: 5px;
+	resize: none;
+	line-height: 1.3;
+	padding: 7px 5px;
+}
+.contact form .userinfo{
+	margin-left: 20px;
+	width: 50%;
+}
+.contact .userinfo .input-group{
+	margin-bottom: 16px;
+}
+.contact .input-group label{
+	display: block;
+  	font-weight: 500;
+  	margin-bottom: 8px;
+}
+.contact .input-group input {
+	width: 100%;
+	padding: 7px 5px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+  }
+  
+  .contact input[type='submit'] {
+	width: 80px;
+	background: #00cc98;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	display: block;
+	margin-left: auto;
+	color: #fff;
+	outline: none;
+	cursor: pointer;
+  }
+  
+  .contact input[type='submit']:hover {
+	background: #74ffdf;
+  }
+
+/* 頁尾 */
+.footer h2, .footer img, .footer li a, .footer li span {
+	display: inline-block;
+  }
+  
+  .footer a {
+	float: left;
+	display: block;
+  }
+  
+  .footer a h2 {
+	text-indent: 101%;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 0;
+  }
+  
+  .footer a img {
+	vertical-align: middle;
+  }
+  
+  .footer ul {
+	float: right;
+  }
+  
+  .footer ul li a {
+	width: 100%;
+	color:black;
+  }
+  
+  .footer ul li span {
+	line-height: 1.5;
+	letter-spacing: 1px;
+	width: 90px;
+	text-align: right;
+  }
+  
+  .footer ul li span:last-of-type {
+	width: auto;
+	color: #e55995;
+  }
+  
+  .footer ul li span:last-of-type:hover {
+	color: #bb1d61;
+  }
