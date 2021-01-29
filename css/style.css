@@ -56,6 +56,24 @@ table {
     width: 1024px;
 
 }
+
+/* 回到頁首 */
+.scroll-top {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	z-index: 10;
+  }
+  
+  .scroll-top .fas {
+	color: #00cb9b;
+	background: #fff;
+	border-radius: 50%;
+	font-size: 50px;
+	text-decoration: none;
+  }
+  
+
 .border{
 	display:flex;
 	justify-content: flex-end;
@@ -113,12 +131,76 @@ table {
 	text-decoration: none;
 	text-align: center;
 	padding: 13px 10px 14px 10px;
-	margin-left: 40px;
 	border-bottom: 3px solid #0000;
   }
-  .menu li a:hover{
-	  border-bottom: 3px solid;
+
+  .menu .mune-item{
+	float: left;
+	margin: 0 20px;
   }
+  
+  .menu .menu-item > a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	white-space: nowrap;
+	text-decoration: none;
+  }
+  
+  .menu .menu-item > a:after {
+	content: '';
+	position: absolute;
+	height: 5px;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background: #00cb9b;
+	transition: transform 0.1s ease-out;/*底線綠色*/
+	transform: scaleX(0);
+	transform-origin: bottom left;
+  }
+  
+  .menu .menu-item a:hover:after {
+	transform: scaleX(1);
+  }
+  .active{
+	  color:#000;
+  }
+  .clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+  }
+  
+  .dropdown {
+	position: relative;
+  }
+  
+  .dropdown-menu {
+	display: none;
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+  }
+  .dropdown-item {
+	margin: 5px 0;
+  }
+  .dropdown-item a {
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	text-align: center;
+	color: #00cb9b;
+  }
+  
+  .dropdown-item:hover {
+	background: #eee;
+  }
+
 
   /* 廣告橫幅 */
 
@@ -148,6 +230,57 @@ table {
   .banner h2 span{
 	  padding: 25px;
   }
+
+  .swiper-container {
+	height: 100%;
+  }
+  
+  .slide1 {
+	background: url(../images/banner1.png) right center;
+	position: relative;
+  }
+  
+  .slide2 {
+	background: url(../images/banner2.jpg) right center;
+	position: relative;
+  }
+  
+  .slide3 {
+	background: url(../images/banner3.jpg) center center;
+	position: relative;
+  }
+  
+  .swiper-slide h2 {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+	padding: 25px;
+	background: rgba(0, 0, 0, 0.3);
+	color: #fff;
+	font-size: 35px;
+	color: #fff;
+	line-height: 1.4;
+	padding: 40px;
+  }
+  
+  .slide2 h2 {
+	text-align: right;
+  }
+  
+  .slide3 h2 {
+	text-align: center;
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+	color: #fff;
+  }
+  
+  .swiper-pagination-bullet-active {
+	background: #fff;
+  }
+  
 
 /* 內容 */
 .content{

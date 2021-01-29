@@ -3,38 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML 作業+Jquert效果</title>
+    <link rel="icon" href="https://www.hexschool.com/favicon.ico" />
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"/>
+  <link rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
    <div class="wrap">
+     <!-- scroll to top 按鈕 -->
+     <div class="scroll-top">
+      <a href="#" class="fas fa-arrow-circle-up"></a>
+    </div>
     <ul class="border">
         <li><a href="#" class="fb">
             <img src="https://i.imgur.com/XdyBMZ7.png" alt="fb logo">粉絲團
-          </a></li>
+          </a>
+        </li>
         <li><a href="#" class="twitter">
             <img src="https://i.imgur.com/9x7zmRH.png" alt="twitter logo">追隨我們
-          </a></li>
+          </a>
+        </li>
       </ul>
         <div class="header">
            <a href="#"><img src="images/logo.png" alt=""></a>
-           <ul class="menu">
-            <li><a href="#">首頁</a></li>
-            <li><a href="#">產品介紹</a></li>
-            <li><a href="#">聯絡我們</a></li>
+          <ul class="menu">
+            <li class="menu-item"><a href="#">首頁</a></li>
+              <li class="munu-item dropdown">
+                <a href="#">產品介紹&nbsp;<i class="fas fa-chevron-circle-down"></i></a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                        <a href="#">網頁設計</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">前端開發</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">UI 設計</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">後端</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">直播課程</a>
+                    </li>
+              </ul>
+            </li>
+            <li class="menu-item  scroll-contact"><a href="#">聯絡我們</a></li>
            </ul>
         </div>
 
         <section class="banner">
-          <h2><span>六角學院<br />讓你奠定良好的前端基礎</span></h2>
-        </section>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide1">
+                <h2><span>六角學院<br />讓你奠定良好的前端基礎</span></h2>
+              </div>
+            <div class="swiper-slide slide2">
+              <h2>不論你的背景<br />六角都有成功案例</h2>
+            </div>
+          <div class="swiper-slide slide3">
+            <h2>不論身在何處<br />在線上帶你就業</h2>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      </section>
 
         <div class="content">
            <div class="course">
                <div class="course-item">
+                <a class="lightbox-img-link" href="images/html.png" data-lightbox="myset">
                    <img src="images/html.png" alt="">
-                   <div class="text">
+                </a>
+                  <div class="text">
                     <h2>HTML5 基礎教學</h2>
                     <p>
                       主流前端網站設計的基礎就在六角學院，在這裡不再是填鴨式教學，而是透過實際的範例，了解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。
@@ -42,7 +91,9 @@
                   </div>
                </div>
                <div class="course-item">
-                <img src="images/rwd.png" alt="">
+                <a class="lightbox-img-link" href="images/rwd.png" data-lightbox="myset">
+                  <img src="images/rwd.png" alt="">
+                </a>
                 <div class="text">
                   <h2>響應式網站設計</h2>
                   <p>
@@ -52,7 +103,9 @@
                 </div>
             </div>
             <div class="course-item">
+              <a class="lightbox-img-link" href="images/jQuery.png" data-lightbox="myset">
                 <img src="images/jQuery.png" alt="">
+              </a>
                 <div class="text">
                   <h2>jQuery 實戰教學</h2>
                   <p>本課程有以下特色</p>
@@ -115,7 +168,7 @@
           </table>
         </section>
         
-        <section class="contact">
+        <section id="contact" class="contact">
           <h2>對我們課程有興趣嗎？<br />歡迎留下你的資料</h2>
           <form>
             <textarea cols="30" rows="15" placeholder=""></textarea>
@@ -154,6 +207,9 @@
             </li>
           </ul>
         </div>
-   </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+      <script src="js/script.js"></script>
 </body>
 </html>
